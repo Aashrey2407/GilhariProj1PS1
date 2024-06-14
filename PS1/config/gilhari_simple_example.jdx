@@ -1,0 +1,33 @@
+//JDX_DATABASE JDX:jdbc:sqlite:./config/json_example.db;USER=sa;PASSWORD=sa;JDX_DBTYPE=SQLITE;DEBUG_LEVEL=5
+//JDBC_DRIVER org.sqlite.JDBC
+
+// Hard coding of the IP address of a MySQL database instance is needed to access the database 
+// from within a docker container. Same for a Postgres database.
+// On Windows 10, use "ipconfig /all" on command line to get IPv4 Address (e.g. 174.18.38.81) under 
+// Ethernet adapter vEthernet (Default Switch) line and use that instead of "localhost" in the JDBC url below:
+
+JDX_DATABASE JDX:jdbc:mysql://host.docker.internal/db1?useSSL=false;USER=root;PASSWORD=Sairam2003#;JDX_DBTYPE=MYSQL;DEBUG_LEVEL=5
+
+JDBC_DRIVER com.mysql.cj.jdbc.Driver
+
+// JDX_DATABASE JDX:jdbc:postgresql://localhost:5432/jdxtestdb;USER=postgres;PASSWORD=My_Postgres;JDX_DBTYPE=POSTGRES;DEBUG_LEVEL=5
+// JDBC_DRIVER org.postgresql.Driver
+;
+REM ************************************************************************
+CLASS org.emp.JSON_Employee TABLE Employee
+
+  // First declare all the persistent JSON properties using VIRTUAL_ATTRIB specifications
+  VIRTUAL_ATTRIB id ATTRIB_TYPE int
+  VIRTUAL_ATTRIB name ATTRIB_TYPE java.lang.String
+  VIRTUAL_ATTRIB exempt ATTRIB_TYPE boolean
+  VIRTUAL_ATTRIB compensation ATTRIB_TYPE double
+
+  // date is represented as long (number of milliseconds) for a JSON
+  // object since there is no standard JSON string format for date representation
+  VIRTUAL_ATTRIB DOB ATTRIB_TYPE long
+
+  // Now provide the rest of the mapping specification for this class
+  PRIMARY_KEY id
+  SQLMAP FOR compensation COLUMN_NAME salary
+;
+

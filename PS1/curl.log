@@ -1,0 +1,24 @@
+-e ** BEGIN OUTPUT **
+** Delete all Employee objects to start fresh
+0
+-e ** Insert one Employee object 
+
+New Employee entity(entities) inserted; result=null-e 
+** Query all Employee objects
+[{"DOB":381484800390,"name":"John39","compensation":54039,"exempt":true,"id":39}]
+** Insert multiple (two) Employee objects
+New Employee entity(entities) inserted; result=null
+** Query all Employee objects
+[{"DOB":381484800390,"name":"John39","compensation":54039,"exempt":true,"id":39},{"DOB":381484800400,"name":"Mike40","compensation":54040,"exempt":false,"id":40},{"DOB":381484800410,"name":"Mary41","compensation":54041,"exempt":true,"id":41}]
+** Query non-exempted Employee objects
+[{"DOB":381484800400,"name":"Mike40","compensation":54040,"exempt":false,"id":40}]
+** Query the count of exempted Employee objects
+2
+** Delete all exempted Employee objects
+2
+** Query the count of all exempted Employee objects
+0
+** Query the count of all Employee objects
+1
+** END OUTPUT **
+
