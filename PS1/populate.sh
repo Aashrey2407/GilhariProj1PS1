@@ -12,12 +12,6 @@
 # container shell on the host machine, you may have to use
 # the exposed port number (e.g., 8081) instead.
 
-echo "** BEGIN OUTPUT **" > curl.log
-
-echo "** Delete all Employee objects to start fresh" >> curl.log
-curl -X DELETE "http://localhost:80/gilhari/v1/Employee" >> curl.log
-echo "" >> curl.log
-
 for i in $(seq 1 50)
 do
   # Create a unique ID, name, compensation, and DOB
