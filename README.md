@@ -9,6 +9,7 @@ Download and install MySQL from the [official MySQL website](https://dev.mysql.c
 
 note: in this project MySql is used, if the reader wishes he/she can use RDBMS.
 
+
 ## GILHARI SETUP AND CONFIGURATION
 
 First, make a project directory with the following sub-folders: ```config```, ```src```, ```libs```, ```bin```.
@@ -29,6 +30,7 @@ Then we will run the image using:
 Run the docker image using: 
 ```docker run -p 80:8081 --platform linux/amd64 my_app_gilhari12```
 
+
 ## SUMMARY
 
 1. Update and modify files according to system requirements.
@@ -41,4 +43,22 @@ Run the docker image using:
 Open MySql client, enter the password when prompted, create a database by running the command: ```CREATE DATABASE jdxtestdb;```, the creation of database can be verified by running the command ```SHOW DATABASES;```, You should see ```jdxtestdb``` listed. Switch to the newly created database using the command ```USE jdxtestdb;```. This command sets ```jdxtestdb``` as the active database for subsequent operations.
 
 
+## TECHNOLOGIES USED
 
+1. GILHARI MICROSERVICE - Gilhari is a microservice framework to provide persistence for JSON objects in relational databases. 
+                          This microservice framework, available in a Docker image, is configurable as per an app-specific object and relational models.
+
+2. JDX - JDX is used for managing databases and automating tasks such as table creation and data population. It involves mapping between
+         object-oriented software models and relational databases.
+
+3. POSTMAN - Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines
+             collaboration so you can create better APIs—faster.
+
+4. DOCKER - Docker is an application that lets you build, share, and run containerized applications and microservices. It provides a
+           straightforward GUI (Graphical User Interface) that lets you manage your containers, applications, and images directly from your machine.Docker Desktop reduces the time spent on complex setups so you can focus on writing code. It takes care of port mappings, file system concerns, and other default settings.
+
+5. REST APIs - Gilhari exposes a REST (REpresentational State Transfer) interface to provide APIs (POST, GET, PUT, DELETE…) for CRUD 
+               (Create, Retrieve, Update, and Delete) operations on the app-specific JSON objects.
+
+6. GIT - GitHub is a developer platform that allows developers to create, store, manage and share their code. It uses Git software, 
+         providing the distributed version control of Git plus access control, bug tracking, software feature requests, task management, continuous integration, and wikis for every project.
