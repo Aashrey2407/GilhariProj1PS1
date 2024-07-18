@@ -1,0 +1,3 @@
+### The Gilhari Project's GUI
+
+The user experience can be considerably improved by a Graphical User Interface (GUI). A graphical user interface (GUI) is helpful in this project since it offers a simple and easy way to communicate with the Gilhari microservice. A GUI provides visual components like buttons, forms, and menus in place of command-line interfaces or raw API calls, making database tasks like inserting, updating, and querying data easier to handle. By offering quick visual feedback and easily accessible controls, this not only lowers the learning curve for users who might not be accustomed with command-line operations but also simplifies the workflow.
